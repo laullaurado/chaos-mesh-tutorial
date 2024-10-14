@@ -1,0 +1,17 @@
+{
+  "title": "Simulating failures in applications using Chaos Mesh",
+  "description": "",
+  "details": {
+    "intro": {
+      "text": "intro/intro_1.md"
+    },
+    "steps": [
+      {
+        "title": "Create a pod"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
