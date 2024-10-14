@@ -1,0 +1,7 @@
+{
+  "title": "Simulating failures in applications using Chaos Mesh",
+  "description": "",
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
