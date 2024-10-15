@@ -18,6 +18,10 @@
       {
         "title": "Installing and setting up Chaos Mesh",
         "text": "step2/step2.md"
+      },
+      {
+        "title": "Chaos Experiments",
+        "text": "step3/step3.md"
       }
     ]
   },
