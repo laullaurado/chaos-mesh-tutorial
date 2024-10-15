@@ -7,23 +7,23 @@ To Create a PodChaos Experiment we have to do these steps:
 
 1. Define the PodChaos YAML Configuration: 
 
-    Create a file `named pod-failure-details.yaml` with the following content:
+    Create a file named `pod-failure-details.yaml` with the following content. Be careful with the indentation, make sure it is exactly as the code below.
     ```
     apiVersion: chaos-mesh.org/v1alpha1
     kind: PodChaos
     metadata:
-    name: pod-failure-details
-    namespace: chaos-testing
+      name: pod-failure-details
+      namespace: chaos-testing
     spec:
-    action: pod-failure
-    mode: one
-    duration: '2m'
-    selector:
+      action: pod-failure
+      mode: one
+      duration: '2m'
+      selector:
         namespaces:
         - default
         labelSelectors:
-        'app': 'details'
-        'version': 'v1'
+          'app': 'details'
+          'version': 'v1'
     ```{{copy}}
     
     This experiment targets one pod with the labels app=details and version=v1 in the default namespace. The failure lasts for 2 minutes and is managed in the chaos-testing namespace.
@@ -61,27 +61,27 @@ We will create a net emulation experiment.
 To Create a NetworkChaos experiment we have to do these steps:
 1. Create the experiment by  using the YAML file to introduce a network delay
     
-    Write the experiment configuration to the `network-delay-productpage.yaml` file, as shown below:
+    Write the experiment configuration to the `network-delay-productpage.yaml` file, as shown below. Be careful with the indentation, make sure it is exactly as the code below.
 
     ```
     apiVersion: chaos-mesh.org/v1alpha1
     kind: NetworkChaos
     metadata:
-    name: network-delay-productpage
-    namespace: chaos-testing
+      name: network-delay-productpage
+      namespace: chaos-testing
     spec:
-    action: delay
-    mode: one
-    selector:
+      action: delay
+      mode: one
+      selector:
         namespaces:
         - default
         labelSelectors:
-        "app": "productpage"
-        "version": "v1"
-    delay:
-        latency: "10s"
-        jitter: "500ms"
-    duration: "2m"
+          'app': 'productpage'
+          'version': 'v1'
+      delay:
+        latency: '10s'
+        jitter: '500ms'
+      duration: '2m'
     ```{{copy}}
 
 The provided YAML file  targets a specific Pod (with app=productpage and version=v1 labels in the default namespace) and adds a 10-second latency (with up to 500ms jitter) to its network traffic. The experiment runs for 2 minutes. The configuration helps simulate real-world network delays to test the resilience of our application under adverse conditions.
@@ -89,17 +89,18 @@ The provided YAML file  targets a specific Pod (with app=productpage and version
 2. Apply the NetworkChaos  Experiment
     
     Run the following command to apply the NetworkChaos experiment:
+
     `kubectl apply -f network-delay-productpage.yaml`{{exec}}
 
 3. Verify the PodChaos experiment is running
 
     After applying the NetworkChaos experiment, ensure that it has been successfully created and is active by verifying the status and getting details using the following command:
 
-    `kubectl describe networkchaos network-delay-productpage -n chaos-testing`
+    `kubectl describe networkchaos network-delay-productpage -n chaos-testing`{{exec}}
 
     This command provides insights into the experiment's specifications, current status, and any events related to it.
 
 4. Monitor the impact on the Bookinfo application
     
     While the NetworkChaos experiment is active, monitor the Bookinfo application's behaviour to observe how it handles network delays.
-    If you refresh the page, you can see that it takes longer to load, and it maybe gives a 502 error.
+    If you refresh the page, you can see that it takes longer to load, and it gives a 502 error.
