@@ -7,11 +7,14 @@
     },
     "steps": [
       {
-        "title": "Create a pod"
+        "text": "intro/intro_1.md"
       }
     ]
   },
   "backend": {
     "imageid": "kubernetes-kubeadm-1node-4GB"
+  },
+  "interface": {
+    "layout": "ide"
   }
 }
