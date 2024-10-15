@@ -18,13 +18,13 @@ Now let’s see how to deploy Bookinfo of the application step by step:
 
     This command applies the configuration specified in the .yaml file to the Kubernetes cluster.
 
-        `kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.17/samples/bookinfo/platform/kube/bookinfo.yaml`{{exec}}
+    `kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.17/samples/bookinfo/platform/kube/bookinfo.yaml`{{exec}}
 
 2. Check the Status of Pods
 
     This command displays the status of the pods created by the Bookinfo deployment. You can see whether the pods are running, pending, or facing any issues.
 
-        `kubectl get pods`{{exec}}
+    `kubectl get pods`{{exec}}
 
     All your pods should be in running state. If it's not the case yet. just wait a few minutes.
 
@@ -32,13 +32,13 @@ Now let’s see how to deploy Bookinfo of the application step by step:
 
     This command exposes the productpage component of the Bookinfo application to external traffic via a port on the cluster nodes, allowing you to access it from outside the cluster.
 
-        `kubectl expose deployment productpage-v1 --type=NodePort --name=productpage-nodeport`{{exec}}
+    `kubectl expose deployment productpage-v1 --type=NodePort --name=productpage-nodeport`{{exec}}
 
 4. Check the Details of the Exposed Productpage Service
 
     This command provides details about the productpage-nodeport service, such as its cluster IP, external port, and node port.
 
-        `kubectl get svc productpage-nodeport`{{exec}}
+    `kubectl get svc productpage-nodeport`{{exec}}
 
 You have now deployed the application. To visualize it: 
 1. Go to the hamburger menu in the top right of the page

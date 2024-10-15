@@ -14,7 +14,7 @@ The following figure describes the architecture of Chaos Mesh:
 
     This command adds the Chaos Mesh Helm chart repository to your local Helm client.
 
-        `helm repo add chaos-mesh https://charts.chaos-mesh.org`{{exec}}
+    `helm repo add chaos-mesh https://charts.chaos-mesh.org`{{exec}}
 
     Helm can now access and install Chaos Mesh charts from the specified repository.
 
@@ -22,7 +22,7 @@ The following figure describes the architecture of Chaos Mesh:
 
     This command establishes a separate namespace in Kubernetes for deploying Chaos Mesh components.
 
-        `kubectl create namespace chaos-testing`{{exec}}
+    `kubectl create namespace chaos-testing`{{exec}}
 
     A logical separation is created, isolating Chaos Mesh resources from other applications.
 
@@ -30,7 +30,7 @@ The following figure describes the architecture of Chaos Mesh:
 
     Deploys Chaos Mesh into the Kubernetes cluster using Helm with specific configurations. 
 
-        `helm install chaos-mesh chaos-mesh/chaos-mesh --namespace=chaos-testing --set dashboard.create=true --set chaosDaemon.runtime=containerd --set chaosDaemon.socketPath=/run/containerd/containerd.sock --version 2.7.0`{{exec}}
+    `helm install chaos-mesh chaos-mesh/chaos-mesh --namespace=chaos-testing --set dashboard.create=true --set chaosDaemon.runtime=containerd --set chaosDaemon.socketPath=/run/containerd/containerd.sock --version 2.7.0`{{exec}}
 
     Chaos Mesh components, including the Dashboard, Controller Manager, and Daemon, are deployed in the chaos-testing namespace with the specified settings.
 
@@ -38,6 +38,6 @@ The following figure describes the architecture of Chaos Mesh:
 
     Lists all the pods running in the chaos-testing namespace to verify that Chaos Mesh components are up and running.
 
-        `kubectl get pods -n chaos-testing`{{exec}}
-        
+    `kubectl get pods -n chaos-testing`{{exec}}
+
     Displays the status of Chaos Mesh pods (e.g., Running, Pending), ensuring that the installation was successful.
