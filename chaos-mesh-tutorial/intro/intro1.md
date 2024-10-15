@@ -1,5 +1,3 @@
-## 1. Introduction (part 1)
-
 In today's complex distributed systems, unexpected failures can result in significant downtime and revenue loss. Traditional testing methods often fall short in identifying all potential failure points, particularly under conditions of high load or network instability. **Chaos engineering** addresses this gap by proactively testing system resilience, ensuring that applications can withstand and recover from real-world disruptions.
 
 But what exactly is chaos engineering? **Chaos engineering** is a disciplined approach to identifying and mitigating system failures by intentionally introducing controlled disruptions into your infrastructure. By simulating real-world failure scenarios, chaos engineering enables teams to observe how their applications behave under stress, ultimately building robustness and resilience against unforeseen issues.

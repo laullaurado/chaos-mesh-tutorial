@@ -3,11 +3,22 @@
   "description": "",
   "details": {
     "intro": {
-      "text": "intro/intro_1.md"
+      "title": "Introduction",
+      "steps": [
+        {
+          "title": "Part 1",
+          "text": "intro/intro1.md"
+        },
+        {
+          "title": "Part 2",
+          "text": "intro/intro2.md"
+        }
+      ]
     },
     "steps": [
       {
-        "text": "intro/intro_2.md"
+        "title": "Problem and Application to Deploy",
+        "text": "step1/step1.md"
       }
     ]
   },
