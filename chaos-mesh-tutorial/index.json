@@ -3,14 +3,10 @@
   "description": "",
   "details": {
     "intro": {
-      "title": "Introduction (part 1)",
+      "title": "Introduction",
       "text": "intro/intro1.md"
     },
     "steps": [
-      {
-        "title": "Introduction (part 2)",
-        "text": "intro/intro2.md"
-      },
       {
         "title": "Problem and Application to Deploy",
         "text": "step1/step1.md"
@@ -22,8 +18,16 @@
       {
         "title": "Chaos Experiments",
         "text": "step3/step3.md"
+      },
+      {
+        "title": "Conclusion",
+        "text": "step4/step4.md"
       }
-    ]
+    ],
+    "finish": {
+      "title": "References",
+      "text": "finish/finish.md"
+    }
   },
   "backend": {
     "imageid": "kubernetes-kubeadm-1node-4GB"
