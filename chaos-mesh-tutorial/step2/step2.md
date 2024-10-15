@@ -36,8 +36,8 @@ The following figure describes the architecture of Chaos Mesh:
 
 4. Verify the Deployment of Chaos Mesh Pods
 
-    Lists all the pods running in the chaos-testing namespace to verify that Chaos Mesh components are up and running.
+    Lists the status of all the Chaos Mesh Pods in the chaos-testing namespace to verify that are up and running.
 
     `kubectl get pods -n chaos-testing`{{exec}}
 
-    Displays the status of Chaos Mesh pods (e.g., Running, Pending), ensuring that the installation was successful.
+    All your pods should be in running state. If it's not the case yet, just wait a few minutes.

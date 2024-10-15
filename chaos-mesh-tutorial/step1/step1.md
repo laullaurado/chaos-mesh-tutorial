@@ -26,7 +26,7 @@ Now let’s see how to deploy Bookinfo of the application step by step:
 
     `kubectl get pods`{{exec}}
 
-    All your pods should be in running state. If it's not the case yet. just wait a few minutes.
+    All your pods should be in running state. If it's not the case yet, just wait a few minutes.
 
 3. Expose the Productpage Service Using NodePort
 
